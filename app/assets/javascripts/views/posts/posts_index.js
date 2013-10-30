@@ -1,8 +1,7 @@
 JournalApp.Views.PostsIndex = Backbone.View.extend({
 	template: JST['posts/index'],
 
-	initialize: function(options) {
-		//this.collection = options.collection -- next line makes it unnecessary?
+	initialize: function() {
 		this.listenTo(this.collection, "add remove reset change:title", this.render);
 	},
 
